@@ -65,6 +65,9 @@ alias less='less -NM'
 # push
 alias gp='(){git add .;git commit -m $1; git push origin HEAD}'
 
+# cherry pick
+alias gcp='(){git cherry-pick $1}'
+
 # delete branch
 alias zaraki='(){git branch | grep f | xargs git branch -D}'
 alias madante='git branch | xargs git branch -D'
