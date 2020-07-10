@@ -56,17 +56,39 @@ alias mv='mv -i'
 alias vi='vim'
 alias cat='cat -n'
 alias less='less -NM'
-alias gbc='f(){git branch | grep $1 | xargs git checkout -b test};f'
-alias zaraki='f(){git branch | grep f | xargs git branch -D};f'
-alias ruler='f(){git checkout master};f'
+
+# delete branch
+alias zaraki='(){git branch | grep f | xargs git branch -D}'
 alias madante='git branch | xargs git branch -D'
-alias gcr='(){git branch -r | sed -e "s/origin\///g" | grep $1 | xargs git checkout}'
-alias gc='(){git branch | grep $1 | xargs git checkout}'
-alias gro='git rebase -i origin/master'
-alias sz='source ~/.zshrc'
-alias vz='vim ~/.zshrc'
+
+# look branch
 alias gb='git branch'
 alias gbr='git branch -r'
+alias gbm='(){git branch -m $1}'
+
+# look commit
+alias glo='git log --oneline'
+
+# look diff
+alias gd='git diff'
+alias gdc='git diff --cache'
+alias gdb='(){git diff $1..$2}'
+
+# checkout
+alias gbc='{git branch | grep $1 | xargs git checkout -b test}'
+alias ruler='f(){git checkout master};f'
+alias gcr='(){git branch -r | sed -e "s/origin\///g" | grep $1 | xargs git checkout}'
+alias gc='(){git branch | grep $1 | xargs git checkout}'
+alias gcb='git fetch;(){git checkout -b $1 origin/develop}'
+alias gsui='git submodule update --init'
+
+# rebase
+alias gro='git rebase -i origin/master'
+
+# edit zshrc
+alias sz='source ~/.zshrc'
+alias vz='vim ~/.zshrc'
 alias vsz='vim ~/.zshrc; source ~/.zshrc'
+
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
