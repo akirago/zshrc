@@ -60,6 +60,11 @@ alias vi='vim'
 alias cat='cat -n'
 alias less='less -NM'
 
+## git
+
+# push
+alias gp='(){git add .;git commit -m $1; git push origin HEAD}'
+
 # delete branch
 alias zaraki='(){git branch | grep f | xargs git branch -D}'
 alias madante='git branch | xargs git branch -D'
@@ -87,6 +92,9 @@ alias gsui='git submodule update --init'
 
 # rebase
 alias gro='git rebase -i origin/master'
+
+# adb
+alias aid='(){adb shell am start -a android.intent.action.VIEW -d $1}'
 
 # edit zshrc
 alias sz='source ~/.zshrc'
