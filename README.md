@@ -1,14 +1,15 @@
 # zshrc
-zshで気軽にaliasを登録する為のリポジトリ
+zshで気軽にaliasを使いこなせるようにするリポジトリ
 
 ## 前提
-zshモードになっているかどうか
+zshモードになっている
 
 ## やり方
 
 ### 初期化
 ```chmod a+rx apply.sh init.sh```\
 ```./init.sh```
+
 ### 修正方法
 ```./apply.sh```
 
