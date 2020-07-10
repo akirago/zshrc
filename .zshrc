@@ -103,8 +103,16 @@ alias gsui='git submodule update --init'
 # rebase
 alias gro='git rebase -i origin/master'
 
+## android
+
 # adb
 alias aid='(){adb shell am start -a android.intent.action.VIEW -d $1}'
+
+## docker
+
+# compose
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
 
 # edit zshrc
 alias sz='source ~/.zshrc'
