@@ -1,6 +1,11 @@
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/$USER/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/$USER/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -94,7 +99,8 @@ alias gdb='(){git diff $1..$2}'
 
 # checkout
 alias gbc='{git branch | grep $1 | xargs git checkout -b test}'
-alias ruler='f(){git checkout master};f'
+alias ruler='git checkout master'
+alias rulerd='git checkout develop'
 alias gcr='(){git branch -r | sed -e "s/origin\///g" | grep $1 | xargs git checkout}'
 alias gc='(){git branch | grep $1 | xargs git checkout}'
 alias gcb='git fetch;(){git checkout -b $1 origin/develop}'
