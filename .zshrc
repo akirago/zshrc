@@ -74,6 +74,9 @@ alias less='less -NM'
 
 ## git
 
+# add & commit & push
+alias cmp='f(){git fetch && git pull && git add . && git commit -m $1 && git push origin HEAD};f'
+
 # push
 alias gp='(){git add .;git commit -m $1; git push origin HEAD}'
 
